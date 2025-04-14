@@ -1,0 +1,13 @@
+[project]
+name = "classification"
+requires-python = ">=3.8"
+version = "0.1.0"
+authors = [
+    {name = "Konstantinos Zarmakoupis", email = "zarmaks@gmail.com"},
+]
+description = "Classification Repository"
+dependencies = [
+    "torch>=2.5.0",
+    "lightning>=2.5.0",
+    "pytest",
+]
