@@ -1,6 +1,6 @@
 import pytest
 import torch
-from classification.neuralnetwork import SimpleMLP
+from classification.neuralnetwork import SimpleMLP, SimpleCNN
 
 @pytest.fixture
 def model_params():
@@ -29,3 +29,7 @@ def test_forward_pass(model, model_params):
     x_batch = torch.randn(batch_size, model_params['input_size'])
     output_batch = model(x_batch)
     assert output_batch.shape == (batch_size, model_params['num_classes'])
+
+def test_cnn_model():
+    model = SimpleCNN()
+    assert isinstance(model, SimpleCNN)
